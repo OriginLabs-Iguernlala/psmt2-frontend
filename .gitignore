@@ -5,7 +5,6 @@ _olint
 *~
 #*
 autom4te.cache
-configure
 config.status
 .depend
 *.cm*
@@ -20,5 +19,6 @@ src/smtlib_parser.ml
 src/smtlib_parser.mli
 src/smtlib_parser.conflicts
 config.log
-Makefile
+autoconf
+ocp-autoconf.d
 META

@@ -1,0 +1,11 @@
+OCaml.program("standalone_minimal",
+  ocaml + {
+    sort = false;
+    requires = [
+      "psmt2-frontend"
+    ];
+    files = [
+      "standalone_minimal.ml"
+    ];
+  });
+

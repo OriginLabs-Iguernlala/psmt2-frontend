@@ -1,36 +1,33 @@
-opam-version: "1.2"
-name: "psmt2-frontend"
+(**************************************************************)
+(*                                                            *)
+(*      This file is managed by ocp-autoconf                  *)
+(*  Remove it from `manage_files` in 'ocp-autoconf.config'    *)
+(*  if you want to modify it manually (or use 'opam.trailer') *)
+(*                                                            *)
+(**************************************************************)
+
+opam-version: "2.0"
 version: "0.2"
-
-authors: "Albin Coquereau"
-maintainer: "Albin Coquereau"
-
-license: "Apache 2.0"
+license: "Apache.2.0"
+maintainer: "Albin Coquereau <albin.coquereau@ocamlpro.com>"
+authors: [
+  "Albin Coquereau"
+]
 homepage: "https://github.com/Coquera/psmt2-frontend"
-
+dev-repo: "git+http://github.com/Coquera/psmt2-frontend.git"
 bug-reports: "https://github.com/Coquera/psmt2-frontend/issues"
-dev-repo: "https://github.com/Coquera/psmt2-frontend.git"
-
-
-build:[
-        ["autoconf"]
-        ["./configure" "-prefix" "%{prefix}%"]
-	[make]
+build: [
+  [   ]
+  [ make ]
 ]
-
-
-install:[
-	[make "install"]
+install: [
+  [ make "install" ]
 ]
-
-remove:[
-        ["ocamlfind" "remove" "psmt2-frontend"]
+remove: [
 ]
-
 depends: [
-  "ocamlfind" {build}
-  "conf-autoconf" {build}
-  "menhir"
+     "ocaml" {>="4.04.0"}
+     "menhir"
+     "ocamlfind"
+     "ocp-build"
 ]
-
-available: [ ocaml-version >= "4.04" ]

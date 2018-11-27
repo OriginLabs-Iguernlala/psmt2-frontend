@@ -1,0 +1,20 @@
+OCaml.library("psmt2-frontend",
+  ocaml + {
+    sort = true;
+    requires = [
+    ];
+    files = OCaml.pack("Psmt2Frontend", [
+      "version.ml";
+      "options.ml";
+      "smtlib_error.ml";
+      "smtlib_lexer.mll";
+      "smtlib_parser.mly", {ocamlyacc = "menhir"};
+      "smtlib_syntax.ml";
+      "smtlib_printer.ml";
+      "smtlib_ty.ml";
+      "smtlib_typing.ml";
+      "smtlib_typed_env.ml";
+      "smtlib_typed_logic.ml";
+    ]);
+  });
+
